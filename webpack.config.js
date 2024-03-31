@@ -8,10 +8,19 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: "Restaurant Page",
       template: "./src/index.html",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.ttf$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
 };

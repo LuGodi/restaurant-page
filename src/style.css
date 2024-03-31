@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Italianno";
+  src: url("./italianno.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+header {
+  color: white;
+}
+nav {
+  height: 3vh;
+  display: flex;
+  opacity: 0.95;
+  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+.hero-banner {
+  background-color: black;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-family: "Italianno", sans-serif;
+}
+
+.main {
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+}
+.main > span {
+  flex-basis: 60%;
+  flex-grow: 3;
+  font-family: sans-serif;
+}
+
+img {
+  flex-basis: 39%;
+  height: 200px;
+}
