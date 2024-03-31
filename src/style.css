@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Italianno";
-  src: url("./italianno.ttf");
+  src: url("./Italianno/Italianno-Regular.ttf");
 }
 
 * {
@@ -11,6 +11,8 @@
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
   color: white;
@@ -27,14 +29,23 @@ button {
   border: none;
   background-color: transparent;
   color: white;
+  font-family: "Italianno", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
+#content {
+  flex-grow: 1;
+}
+
 .hero-banner {
   background-color: black;
   height: 30vh;
   display: grid;
   place-items: center;
   color: white;
-  font-family: "Italianno", sans-serif;
+  font-family: "Italianno", cursive;
+  font-size: 5rem;
+  font-weight: lighter;
 }
 
 .main {
@@ -45,14 +56,27 @@ button {
   align-items: center;
   justify-content: center;
   row-gap: 30px;
+  font-family: "Italianno", sans-serif;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  column-gap: 10px;
 }
 .main > span {
   flex-basis: 60%;
-  flex-grow: 3;
-  font-family: sans-serif;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 5px;
 }
 
 img {
-  flex-basis: 39%;
   height: 200px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: "Italianno", cursive, sans-serif;
+  padding: 2px 15px;
 }
