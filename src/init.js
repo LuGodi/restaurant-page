@@ -22,8 +22,7 @@ export function init() {
 
   mainDivEl.appendChild(writeParagraphToSpan(paragraphIntroText));
 
-  const imgEl = new Image();
-  imgEl.src = IslandFoodImg;
+  const imgEl = createImageElement(IslandFoodImg);
   mainDivEl.appendChild(imgEl);
 
   mainDivEl.appendChild(
@@ -53,4 +52,10 @@ function writeParagraphToSpan(paragraphsArray) {
   });
 
   return spanTextEl;
+}
+
+export function createImageElement(ImageObject) {
+  const imgEl = new Image();
+  imgEl.src = IslandFoodImg;
+  return imgEl;
 }
