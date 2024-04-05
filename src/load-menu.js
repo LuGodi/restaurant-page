@@ -1,29 +1,43 @@
 import { createImageElement } from "./init";
+import MansFolly from "./assets/mans_folly.PNG";
 
-const dishesObject = {
-  dishname: {
+const dishesObject = [
+  {
     name: "Plate",
     description: "Just a well made cheeseburguer",
-    image: "imagesrc",
+    image: MansFolly,
   },
-};
+];
 
 export function createMenu() {
   const mainDivEl = document.createElement("div");
   mainDivEl.classList.add("main");
   const menuContainerEl = document.createElement("div");
-  menuContainerEl.classList.add("menu-piece");
+  menuContainerEl.classList.add("menu-container");
 
   //just to test lets append with a fake object
+  const menuItemsArr = dishesObject.map((dish, index) => {
+    const reverseFlag = !!(index % 2);
+    createMenuItem(dish, reverseFlag);
+  });
+  menuContainerEl.append(...menuItemsArr);
 
   //append menu to the main
+  mainDivEl.appendChild(menuContainerEl);
+  const contentDiv = document.querySelector("#content");
+  contentDiv.replaceChildren(mainDivEl);
 }
 
+//A dish container element is composed of
+// Dish container div
+// img
+// div containing H3 and Paragraph
 function createMenuItem(dishNameObject, reversed) {
   // {name: plate name,
   //      picture: {importedImageName},
   //      description:
 
+  //this will create a menu piece div that holds one item on the menu
   const dishContainerEl = document.createElement("div");
   dishContainerEl.classList.add("menu-piece");
   if (reversed === true) {
@@ -31,7 +45,7 @@ function createMenuItem(dishNameObject, reversed) {
   }
 
   //append dish image
-  const dishImageEl = createImageElement(dishName.picture);
+  const dishImageEl = createImageElement(dishNameObject.picture);
   dishImageEl.classList.add = "dish";
 
   dishContainerEl.appendChild(dishImageEl);
@@ -41,7 +55,7 @@ function createMenuItem(dishNameObject, reversed) {
   dishDetailsContainer.classList.add("dish-description");
 
   //create dish Name Title
-  const dishNameEl = doument.createElement("h3");
+  const dishNameEl = document.createElement("h3");
   dishNameEl.textContent = dishNameObject.dishName;
 
   //create the dish description

@@ -5,11 +5,13 @@ import { createMenu } from "./load-menu.js";
 init();
 console.log("hey beautiful!");
 
-const buttonElements = {
+export const DOMCached = {
+  contentDiv: document.querySelector("#content"),
   home: document.querySelector("#home-button"),
   menu: document.querySelector("#menu-button"),
   about: document.querySelector("#aboutus-button"),
 };
 
-buttonElements.menu.addEventListener("click", createMenu);
+DOMCached.menu.addEventListener("click", createMenu);
+DOMCached.home.addEventListener("click", init);
 //the replacement of the content div should be done here probably

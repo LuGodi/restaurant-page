@@ -1,5 +1,6 @@
 import IslandFoodImg from "./island-food.jpg";
 
+//cached dom just #content
 export function init() {
   const contentDiv = document.querySelector("#content");
   const divContentChilds = [];
