@@ -38,7 +38,6 @@ button {
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  gap: 20px;
 }
 
 .hero-banner {
@@ -54,7 +53,7 @@ button {
 }
 
 .main {
-  padding: 0 30px;
+  padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -65,6 +64,7 @@ button {
   font-weight: lighter;
   column-gap: 10px;
   width: min(100vw, 1000px);
+  flex-grow: 1;
 }
 .main > span {
   flex-basis: 60%;
