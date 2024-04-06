@@ -34,7 +34,11 @@ button {
   cursor: pointer;
 }
 #content {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  align-items: center;
+  gap: 20px;
 }
 
 .hero-banner {
@@ -46,13 +50,13 @@ button {
   font-family: "Italianno", cursive;
   font-size: 5rem;
   font-weight: lighter;
+  align-self: stretch;
 }
 
 .main {
-  width: 70vw;
+  padding: 0 30px;
   display: flex;
   flex-wrap: wrap;
-  margin: 50px auto;
   align-items: center;
   justify-content: center;
   row-gap: 30px;
@@ -60,6 +64,7 @@ button {
   font-size: 1.6rem;
   font-weight: lighter;
   column-gap: 10px;
+  width: min(100vw, 1000px);
 }
 .main > span {
   flex-basis: 60%;

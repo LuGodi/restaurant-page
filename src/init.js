@@ -5,9 +5,9 @@ export function init() {
   const contentDiv = document.querySelector("#content");
   const divContentChilds = [];
   const heroBannerEl = document.createElement("div");
-  heroBannerEl.classList.add("hero-banner");
-  heroBannerEl.textContent = "The Menu";
-  divContentChilds.push(heroBannerEl);
+  // heroBannerEl.classList.add("hero-banner");
+  // heroBannerEl.textContent = "The Menu";
+  divContentChilds.push(createHeroBanner("The Menu"));
 
   const mainDivEl = document.createElement("div");
   mainDivEl.classList.add("main");
@@ -60,4 +60,11 @@ export function createImageElement(ImageObject, rotate = false) {
   imgEl.src = ImageObject;
   if (rotate === true) imgEl.style.transform = "rotate(90deg)";
   return imgEl;
+}
+
+export function createHeroBanner(text) {
+  const heroBannerEl = document.createElement("div");
+  heroBannerEl.classList.add("hero-banner");
+  heroBannerEl.textContent = text;
+  return heroBannerEl;
 }

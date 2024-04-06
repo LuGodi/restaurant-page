@@ -1,7 +1,6 @@
 .menu-container {
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
   justify-content: center;
   flex-grow: 1;
 }
@@ -30,12 +29,12 @@
   min-height: 100px;
   width: 30vw;
   margin: 10px 0;
-  flex: 1 0 60%;
+  flex: 1 0 40%;
   align-self: flex-end;
   color: white;
 }
 
 .menu-piece.reversed > .dish-description {
-  align-self: flex-end;
+  align-self: flex-start;
   text-align: right;
 }

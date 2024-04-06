@@ -1,4 +1,4 @@
-import { createImageElement } from "./init";
+import { createImageElement, createHeroBanner } from "./init";
 import "./menu.css";
 import MansFolly from "./assets/mans_folly.PNG";
 import Memory from "./assets/memory.PNG";
@@ -50,8 +50,8 @@ const dishesObject = [
 export function createMenu() {
   const mainDivEl = document.createElement("div");
   mainDivEl.classList.add("main");
-  const menuContainerEl = document.createElement("div");
-  menuContainerEl.classList.add("menu-container");
+  // const menuContainerEl = document.createElement("div");
+  // menuContainerEl.classList.add("menu-container");
 
   //just to test lets append with a fake object
   const menuItemsArr = dishesObject.map((dish, index) => {
@@ -59,12 +59,13 @@ export function createMenu() {
     return createMenuItem(dish, reverseFlag);
   });
   console.log(menuItemsArr);
-  menuContainerEl.append(...menuItemsArr);
+  const heroBannerEl = createHeroBanner("The Menu's Menu");
+  mainDivEl.append(...menuItemsArr);
 
   //append menu to the main
-  mainDivEl.appendChild(menuContainerEl);
+  // mainDivEl.appendChild(menuContainerEl);
   const contentDiv = document.querySelector("#content");
-  contentDiv.replaceChildren(mainDivEl);
+  contentDiv.replaceChildren(heroBannerEl, mainDivEl);
 }
 
 //A dish container element is composed of
