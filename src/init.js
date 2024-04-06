@@ -55,8 +55,9 @@ function writeParagraphToSpan(paragraphsArray) {
   return spanTextEl;
 }
 
-export function createImageElement(ImageObject) {
+export function createImageElement(ImageObject, rotate = false) {
   const imgEl = new Image();
-  imgEl.src = IslandFoodImg;
+  imgEl.src = ImageObject;
+  if (rotate === true) imgEl.style.transform = "rotate(90deg)";
   return imgEl;
 }
