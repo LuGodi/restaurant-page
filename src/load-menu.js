@@ -1,4 +1,4 @@
-import { createImageElement, createHeroBanner } from "./init";
+import { createImageElement, createHeroBanner } from "./util.js";
 import "./menu.css";
 import MansFolly from "./assets/mans_folly.PNG";
 import Memory from "./assets/memory.PNG";

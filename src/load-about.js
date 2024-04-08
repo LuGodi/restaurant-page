@@ -2,7 +2,7 @@ import {
   createHeroBanner,
   writeParagraphToSpan,
   createImageElement,
-} from "./init.js";
+} from "./util.js";
 import "./about.css";
 import { DOMCached } from "./index.js";
 
