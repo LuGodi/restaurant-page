@@ -7,7 +7,6 @@ import "./about.css";
 import { DOMCached } from "./index.js";
 
 export function createAbout() {
-  console.log(DOMCached);
   const heroBannerEl = createHeroBanner("", true);
   const mainDivEl = document.createElement("div");
   mainDivEl.classList.add("main");

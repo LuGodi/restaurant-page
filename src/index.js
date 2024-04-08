@@ -16,4 +16,3 @@ export const DOMCached = {
 DOMCached.menu.addEventListener("click", createMenu);
 DOMCached.home.addEventListener("click", init);
 DOMCached.about.addEventListener("click", createAbout);
-//the replacement of the content div should be done here probably
