@@ -19,12 +19,12 @@ const dishesObject = [
     description: "Evoke fonding memories",
     image: Memory,
   },
-  {
-    name: "The Bread Plate",
-    description: "In a restaurant known for its bread",
-    image: BreadlessBreadPlate,
-    rotateImage: false,
-  },
+  // {
+  //   name: "The Bread Plate",
+  //   description: "In a restaurant known for its bread",
+  //   image: BreadlessBreadPlate,
+  //   rotateImage: false,
+  // },
   {
     name: "The Mess",
     description: "Our sous chef's dish",

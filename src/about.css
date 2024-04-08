@@ -1,0 +1,7 @@
+.hero-banner.image-banner {
+  background-image: url("./assets/restaurant.PNG");
+  background-position: center;
+  background-color: blue;
+  background-size: contain;
+  align-items: end;
+}

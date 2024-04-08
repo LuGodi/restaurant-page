@@ -44,7 +44,7 @@ function createFooterEl() {
   return footerEl;
 }
 
-function writeParagraphToSpan(paragraphsArray) {
+export function writeParagraphToSpan(paragraphsArray) {
   const spanTextEl = document.createElement("span");
   paragraphsArray.forEach((paragraph) => {
     const paragraphEl = document.createElement("p");
@@ -62,9 +62,12 @@ export function createImageElement(ImageObject, rotate = false) {
   return imgEl;
 }
 
-export function createHeroBanner(text) {
+export function createHeroBanner(text, bgImg = false) {
   const heroBannerEl = document.createElement("div");
   heroBannerEl.classList.add("hero-banner");
   heroBannerEl.textContent = text;
+  if (bgImg === true) {
+    heroBannerEl.classList.add("image-banner");
+  }
   return heroBannerEl;
 }
