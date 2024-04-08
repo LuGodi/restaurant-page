@@ -2,7 +2,7 @@
   background-image: url("./assets/restaurant.PNG");
   background-position: center;
   background-color: black;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   align-items: end;
 }
