@@ -9,15 +9,12 @@ export function init() {
   const contentDiv = document.querySelector("#content");
   const divContentChilds = [];
   const heroBannerEl = document.createElement("div");
-  // heroBannerEl.classList.add("hero-banner");
-  // heroBannerEl.textContent = "The Menu";
+
   divContentChilds.push(createHeroBanner("The Menu"));
 
   const mainDivEl = document.createElement("div");
   mainDivEl.classList.add("main");
   divContentChilds.push(mainDivEl);
-  //   const footerEl = createFooterEl();
-  //   divContentChilds.push(footerEl);
 
   const paragraphIntroText = [
     "We aim to serve an unique in a lifetime experience for those who can afford it.",
